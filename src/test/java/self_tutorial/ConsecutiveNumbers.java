@@ -1,5 +1,7 @@
 package self_tutorial;
 
+import org.junit.jupiter.api.Test;
+
 public class ConsecutiveNumbers {
 
     /*
@@ -37,5 +39,33 @@ public class ConsecutiveNumbers {
                 TestCoders
                 Codility
      */
+
+    public static void consecutiveNumber(int n){
+
+        for(int i = 1; i <= n; i++){
+            String result = ""; // created a variable to store result
+
+            if(i % 2 == 0){
+                result += "Codility";
+            }
+
+            if(i % 3 == 0){
+                result += "Test";
+            }
+
+            if(i % 5 == 0){
+                result += "Coders";
+            }
+
+            System.out.println(result.isEmpty() ? i : result); // in every iteration, if result is empty, the number itself will be displayed
+        }
+
+
+    }
+
+    @Test
+    public void test(){
+        consecutiveNumber(15);
+    }
 
 }
