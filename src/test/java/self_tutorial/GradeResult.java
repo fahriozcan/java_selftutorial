@@ -9,7 +9,7 @@ public class GradeResult {
     if the result is less than 60, result is failed
     if the score is more than or equal to 60, result is passed
     score should be between 0-100, otherwise result is invalid
-    solve the problem with if statement, switch statement and ternary statement
+    solve the problem with if statement and ternary statement
      */
 
     @Test
@@ -22,4 +22,26 @@ public class GradeResult {
         System.out.println("result = " + result);
 
     }
+
+    @Test
+    public void test2() {
+
+        int score = 50;
+
+        String result="";
+
+        if(score>=0 && score<=100){
+            if(score<60){
+                result = "Failed";
+            } else {
+                result = "Passed";
+            }
+        } else {
+            result="Invalid Score";
+        }
+
+        System.out.println("result = " + result);
+
+    }
+
 }
